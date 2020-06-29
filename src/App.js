@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./components/pages/Home";
+import "./styles/app.sass";
 
 const userImage = require("./source/images/user.jpg");
 

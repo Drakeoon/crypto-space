@@ -11,29 +11,25 @@ const Home = () => {
 
   const panes = [
     {
-      heading: "BitCoin price",
+      heading: "BitCoin Price",
       type: chartTypes.LINE,
-      chartData: {},
     },
     {
-      heading: "Ethereum price",
+      heading: "Ethereum Price",
       type: chartTypes.LINE,
-      chartData: {},
     },
     {
-      heading: "Litecoin price",
+      heading: "Litecoin Price",
       type: chartTypes.LINE,
-      chartData: {},
     },
     {
       heading: "Balance",
       type: chartTypes.ADVANCED,
-      chartData: {},
+      span: 2,
     },
     {
       heading: "Crypto Share",
       type: chartTypes.CIRCLE,
-      chartData: {},
     },
   ];
 
@@ -41,10 +37,10 @@ const Home = () => {
     <div className="grid grid-cols-12 bg-gray-200 h-screen">
       <SideNav />
 
-      <div className="col-span-8 md:w-8/12 md:mx-auto">
+      <div className="col-span-10 md:w-10/12 md:mx-auto">
         {/* Main search bar */}
 
-        <div className="flex items-center mt-4">
+        <div className="flex items-center mt-16">
           <div>Search</div>
 
           <div className="ml-auto">Ring icon</div>
@@ -52,12 +48,13 @@ const Home = () => {
         </div>
 
         {/* Tiles with charts */}
-        <div className="grid grid-cols-3 grid-gap-6">
-          {panes.map((pane) => (
+        <div className="grid grid-cols-3 gap-8 mt-16">
+          {panes.map((pane, index) => (
             <Chart
+              {...(pane.span && { className: `col-span-${pane.span}` })}
+              key={pane.heading}
               type={pane.type}
               heading={pane.heading}
-              data={pane.chartData}
             />
           ))}
         </div>
