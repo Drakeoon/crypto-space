@@ -34,10 +34,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="grid grid-cols-12 bg-gray-200 h-screen">
-      <SideNav />
+    <div className="grid grid-cols-12 bg-gray-200 min-h-screen pb-5">
+      {/* <SideNav /> */}
 
-      <div className="col-span-10 md:w-10/12 md:mx-auto">
+      <div className="col-span-12 md:w-10/12 md:mx-auto">
         {/* Main search bar */}
 
         <div className="flex items-center mt-16">

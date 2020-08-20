@@ -10,7 +10,7 @@ export const Chart = ({ className, heading }) => {
   return (
     <div
       ref={ref}
-      className={`bg-white p-10 ${className} ${resizeClass}`}
+      className={`bg-white p-6 md:p-8 flex flex-col ${className} ${resizeClass}`}
       style={{ borderRadius: "24px" }}
     >
       <div className="flex justify-between items-center">
@@ -34,7 +34,7 @@ export const Chart = ({ className, heading }) => {
         </button>
       </div>
 
-      <div className="grid items-end mt-8 grid-cols-3">
+      <div className="grid items-end mt-auto grid-cols-3">
         <div className="col-span-2 text-5xl font-bold">$12400</div>
 
         <ResponsiveContainer width="100%" height={80} className="mt-12">
